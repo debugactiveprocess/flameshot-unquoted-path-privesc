@@ -4,6 +4,8 @@
 **Affected:** Flameshot ≤12.1.0 on Windows  
 **Technique:** Unquoted Registry Path (T1574.009) → FodHelper UAC Bypass (T1548.002)
 
+![PoC Demo](https://github.com/debugactiveprocess/flameshot-unquoted-path-privesc/blob/main/poc_privex_flameshot.gif)
+
 ## Summary
 
 Flameshot writes its executable path to the Windows `Run` registry key without quotes:
@@ -24,4 +26,3 @@ A low-privilege attacker can drop `C:\Program.exe` and hijack logon execution. T
 ```cmd
 cl.exe silent_elevate.c shell32.lib advapi32.lib /link /subsystem:windows
 copy silent_elevate.exe "C:\Program.exe"
-

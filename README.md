@@ -1,7 +1,7 @@
 # Flameshot Unquoted Path Privilege Escalation
 
 **Severity:** HIGH (CVSS ~7.8)  
-**Affected:** Flameshot ≤12.1.0 on Windows  
+**Affected:** Flameshot any version on Windows  
 **Technique:** Unquoted Registry Path (T1574.009) → FodHelper UAC Bypass (T1548.002)
 
 ![PoC Demo](https://github.com/debugactiveprocess/flameshot-unquoted-path-privesc/blob/main/poc_privex_flameshot.gif)
